@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: democonfig
+data:
+  myvalue: "Hello World"
+  debug_mode: "1"
+  log_level: "verbose"
+  default.property: |
+    TEST_CONNECTOR_REPOSITORY_VALUE1="mplin2.azurecr.io/webfrontend"
+    TEST_TAG1=""
+    echo Test5
+    LOAD_BALANCER_VALUE1="80"
