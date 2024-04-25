@@ -1,7 +1,8 @@
 # file: templates/_deployment.yaml
-{{- define "webfrontend._deployment" -}}
 apiVersion: apps/v2
 kind: Deployment
+metadata:
+  name: {{ include "webfrontend._deployment" . }}
 env:
 {{- toYaml .Values.autoscaling | nindent 12 }}
 {{- end }}
