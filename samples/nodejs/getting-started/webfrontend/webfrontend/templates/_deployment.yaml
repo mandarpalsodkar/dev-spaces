@@ -3,9 +3,9 @@ apiVersion: apps/v2
 kind: Deployment
 metadata:
   name: {{ include "webfrontend._deployment" . }}
-env:
-  {{- toYaml .Values.autoscaling | nindent 12 }} 
-# Template of common container env variables
-  {{- if .Values.common.autoscaling }}
-  {{- toYaml .Values.common.autoscaling | nindent 12 }}
-  {{- end }}
+  env:
+    {{- toYaml .Values.autoscaling | nindent 12 }} 
+    # Template of common container env variables
+    {{- if .Values.common.autoscaling }}
+    {{- toYaml .Values.common.autoscaling | nindent 12 }}
+    {{- end }}
