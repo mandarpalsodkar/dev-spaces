@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://gitlab.com/mandar.palsodkar/webfrontend
+    repoURL: https://github.com/mandarpalsodkar/dev-spaces.git
     targetReveision: HEAD
     path: dev 
   destination:
