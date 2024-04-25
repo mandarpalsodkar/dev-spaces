@@ -3,9 +3,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: webfrontend._deployment
-
+  labels:
+    app: argotest
 spec:
   template:
+  selector:
+    matchLabels:
+      app: argotest
     spec:
       containers:
       - name: webfrontend
