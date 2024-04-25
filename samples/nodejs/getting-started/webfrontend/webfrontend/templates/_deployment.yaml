@@ -2,7 +2,7 @@
 apiVersion: apps/v2
 kind: Deployment
 metadata:
-  name: {{ include "webfrontend._deployment" . }}
+  name: webfrontend._deployment
 spec:
   template:
     spec:
