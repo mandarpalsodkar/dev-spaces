@@ -8,7 +8,7 @@ spec:
 
   source:
     repoURL: https://github.com/mandarpalsodkar/dev-spaces.git
-    targetRevision: HEAD
+    targetRevision: master
     path: dev 
   destination:
     server: https://kubernetes.default.svc
