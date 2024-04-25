@@ -10,6 +10,13 @@ spec:
     repoURL: https://github.com/mandarpalsodkar/dev-spaces.git
     targetRevision: master
     path: webfrontend/
+      # path to the yaml manifests
+    helm:
+      passCredentials: true
+      valueFiles:
+        - ../common.values.yaml
+        - values.yaml
+        
   destination:
     server: https://kubernetes.default.svc
     namespace: webfrontend
@@ -17,13 +24,7 @@ spec:
     syncOptions:
     - Createnamespace=false
 
-  # path to the yaml manifests
-  path: webfrontend/
-  helm:
-    passCredentials: true
-    valueFiles:
-      - ../common.values.yaml
-      - values.yaml
+
 
   
   #  automated:
