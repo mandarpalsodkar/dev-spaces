@@ -4,10 +4,12 @@ kind: Deployment
 metadata:
   name: {{ include "webfrontend._deployment" . }}
 spec:
-  env:
-  - name: testargo
-    value:| 
-      {{- toYaml .Values.autoscaling | nindent 12 }}
-      {{- if .Values.common.autoscaling }}
-      {{- toYaml .Values.common.autoscaling | nindent 12 }}
-      {{- end }}
+  template:
+    spec:
+      env:
+      - name: testargo
+        value: |
+          {{- toYaml .Values.autoscaling | nindent 12 }}
+          {{- if .Values.common.autoscaling }}
+          {{- toYaml .Values.common.autoscaling | nindent 12 }}
+          {{- end }}
