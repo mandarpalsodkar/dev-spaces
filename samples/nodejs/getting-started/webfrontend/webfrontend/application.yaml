@@ -24,11 +24,8 @@ spec:
     syncOptions:
     - Createnamespace=false
 
-
-
-  
-  #  automated:
-  #    selfHeal: true
-  #    prune: true
+    automated:
+      selfHeal: true
+      prune: true
 
 
