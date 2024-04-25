@@ -6,10 +6,13 @@ metadata:
   labels:
     app: argotest
 spec:
-  template:
   selector:
     matchLabels:
       app: argotest
+  template:
+    metadata:
+      labels:
+        app: argotest
     spec:
       containers:
       - name: webfrontend
