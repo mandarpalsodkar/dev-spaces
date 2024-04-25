@@ -1,5 +1,5 @@
 apiVersion: argoproj.io/v1alpha1
-kind: application
+kind: Application
 metadata:
   name: webfrontend
   namespace: argocd1
@@ -8,17 +8,26 @@ spec:
 
   source:
     repoURL: https://github.com/mandarpalsodkar/dev-spaces.git
-    targetReveision: HEAD
+    targetRevision: HEAD
     path: dev 
   destination:
     server: https://kubernetes.default.svc
     namespace: webfrontend
-  syncpolicy:
+  syncPolicy:
     syncOptions:
     - Createnamespace=false
+
+  # path to the yaml manifests
+  path: webfrontend/{{releasename}}/
+  helm:
+    passCredentials: true
+    valueFiles:
+      - ../common.values.yaml
+      - values.yaml
+
   
-    automated:
-      selfHeal: true
-      prune: true
+  #  automated:
+  #    selfHeal: true
+  #    prune: true
 
 
