@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/mandarpalsodkar/dev-spaces.git
     targetRevision: master
-    path: webfrontend
+    path: samples/nodejs/getting-started/webfrontend/webfrontend/
       # path to the yaml manifests
     helm:
       passCredentials: true
