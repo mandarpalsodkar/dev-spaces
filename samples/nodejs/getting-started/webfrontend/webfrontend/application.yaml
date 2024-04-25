@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: application
+metadata:
+  name: webfrontend
+  namespace: argocd1
+spec:
+  project: default
+
+  source:
+    repoURL: https://gitlab.com/mandar.palsodkar/webfrontend
+    targetReveision: HEAD
+    path: dev 
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: webfrontend
+  syncpolicy:
+    syncOptions:
+    - Createnamespace=false
+  
+    automated:
+      selfHeal: true
+      prune: true
+
+

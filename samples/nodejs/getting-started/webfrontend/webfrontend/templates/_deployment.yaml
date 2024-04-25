@@ -1,0 +1,11 @@
+# file: templates/_deployment.yaml
+{{- define "webfrontend._deployment" -}}
+apiVersion: apps/v2
+kind: Deployment
+env:
+{{- toYaml .Values.autoscaling | nindent 12 }}
+{{- end }}
+# Template of common container env variables
+{{- if .Values.common.autoscaling }}
+{{- toYaml .Values.common.autoscaling | nindent 12 }}
+{{- end }}

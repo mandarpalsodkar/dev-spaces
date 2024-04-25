@@ -1,0 +1,11 @@
+# file: development/common-values.yaml
+common:
+  autoscaling:
+  - name: minReplicas
+    value: "2"
+  - name: maxReplicas
+    value: "102"
+  - name: port
+    value: "1099"
+  - name: repository
+    value: mplin2.azurecr.io/webfrontend 
