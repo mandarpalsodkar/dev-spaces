@@ -5,8 +5,8 @@ metadata:
   name: {{ include "webfrontend._deployment" . }}
 spec:
   env:
-    {{- toYaml .Values.autoscaling | nindent 12 }} 
-    # Template of common container env variables
-    {{- if .Values.common.autoscaling }}
-    {{- toYaml .Values.common.autoscaling | nindent 12 }}
-    {{- end }}
+  - name: testargo
+    value: {{- toYaml .Values.autoscaling | nindent 12 }}
+           {{- if .Values.common.autoscaling }}
+           {{- toYaml .Values.common.autoscaling | nindent 12 }}
+           {{- end }}
