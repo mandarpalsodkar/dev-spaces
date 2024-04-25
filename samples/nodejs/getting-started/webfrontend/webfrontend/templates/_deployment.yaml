@@ -1,5 +1,5 @@
 # file: templates/_deployment.yaml
-apiVersion: apps/v2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: webfrontend._deployment
