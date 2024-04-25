@@ -3,13 +3,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: webfrontend._deployment
+  labels:
+    {{- include "webfrontend.labels" . | nindent 4 }}
 spec:
+  selector:
+    matchLabels:
+      {{- include "webfrontend.selectorLabels" . | nindent 6 }}
   template:
     spec:
-      env:
-      - name: testargo
-        value: |
-          {{- toYaml .Values.autoscaling | nindent 12 }}
-          {{- if .Values.common.autoscaling }}
-          {{- toYaml .Values.common.autoscaling | nindent 12 }}
-          {{- end }}
+      containers:
+      - name: {{ .Chart.Name }}
+        env:
+        - name: testargo
+          value: |
+            {{- toYaml .Values.autoscaling | nindent 12 }}
+            {{- if .Values.common.autoscaling }}
+            {{- toYaml .Values.common.autoscaling | nindent 12 }}
+            {{- end }}
