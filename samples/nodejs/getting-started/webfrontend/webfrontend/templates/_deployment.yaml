@@ -3,12 +3,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: webfrontend._deployment
-  labels:
-    {{- include "webfrontend.labels" . | nindent 4 }}
+
 spec:
-  selector:
-    matchLabels:
-      {{- include "webfrontend.selectorLabels" . | nindent 6 }}
   template:
     spec:
       containers:
