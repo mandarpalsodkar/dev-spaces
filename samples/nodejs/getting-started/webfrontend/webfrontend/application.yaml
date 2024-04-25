@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/mandarpalsodkar/dev-spaces.git
     targetRevision: master
-    path: /
+    path: webfrontend/
   destination:
     server: https://kubernetes.default.svc
     namespace: webfrontend
@@ -18,7 +18,7 @@ spec:
     - Createnamespace=false
 
   # path to the yaml manifests
-  path: webfrontend/{{releasename}}/
+  path: webfrontend/
   helm:
     passCredentials: true
     valueFiles:
