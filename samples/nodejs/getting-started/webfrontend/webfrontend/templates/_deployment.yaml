@@ -6,7 +6,8 @@ metadata:
 spec:
   env:
   - name: testargo
-    value: {{- toYaml .Values.autoscaling | nindent 12 }}
-           {{- if .Values.common.autoscaling }}
-           {{- toYaml .Values.common.autoscaling | nindent 12 }}
-           {{- end }}
+    value:| 
+      {{- toYaml .Values.autoscaling | nindent 12 }}
+      {{- if .Values.common.autoscaling }}
+      {{- toYaml .Values.common.autoscaling | nindent 12 }}
+      {{- end }}
