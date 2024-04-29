@@ -6,7 +6,7 @@ metadata:
     {{- include "webfrontend.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
-  replicas: {{ .Values.replicaCount | default .Valueconfig.replicaCount }}
+  replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
