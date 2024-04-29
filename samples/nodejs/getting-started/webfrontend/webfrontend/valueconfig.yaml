@@ -8,4 +8,4 @@ common:
     value: "102"
   image:  
   - name: repository
-    value: mplin2.azurecr.io/webfrontend 
+    value: mplin2.azurecr.io/webfrontend/
