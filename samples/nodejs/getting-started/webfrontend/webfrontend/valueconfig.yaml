@@ -39,9 +39,9 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
-service:
+service_1:
   type: LoadBalancer
-  port: 80
+  port_1: 90
 
 config: []
 
@@ -83,10 +83,10 @@ readinessProbe:
     path: /
     port: http
 
-autoscaling:
+autoscaling_1:
   enabled: false
-  minReplicas: 1
-  maxReplicas: 100 
+  minReplicas_1: 2
+  maxReplicas_1: 200 
   #maxReplicas: .Values.common.autoscaling.maxReplicas
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
