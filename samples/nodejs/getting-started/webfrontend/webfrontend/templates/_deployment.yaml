@@ -17,11 +17,11 @@ spec:
       containers:
       - name: webfrontend
         image: "1"
-        testimage:
-          {{- toYaml .Values.image | nindent 12 }}
-          {{- if .Values.common.image }}
-          {{- toYaml .Values.common.image | nindent 12 }}
-          {{- end }}
-            - name: http
-              containerPort: {{ .Values.service_1.port_1 }}
-              protocol: TCP
+          testimage:
+            {{- toYaml .Values.image | nindent 12 }}
+            {{- if .Values.common.image }}
+            {{- toYaml .Values.common.image | nindent 12 }}
+            {{- end }}
+              - name: http
+                containerPort: {{ .Values.service_1.port_1 }}
+                protocol: TCP
