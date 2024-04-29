@@ -1,5 +1,5 @@
 # file: development/common-values.yaml
-
+kind: 
 common:
   autoscaling:
   - name: minReplicas
