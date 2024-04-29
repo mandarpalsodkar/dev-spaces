@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:  
-    repository: mplin2.azurecr.io/
+    repository: mplin2.azurecr.io/test
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
     tag: ""

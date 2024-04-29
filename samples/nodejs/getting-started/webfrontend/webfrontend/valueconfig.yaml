@@ -41,7 +41,7 @@ securityContext: {}
 
 service_1:
   type: LoadBalancer
-  port_1: 90
+  port_1: 100
 
 config: []
 
