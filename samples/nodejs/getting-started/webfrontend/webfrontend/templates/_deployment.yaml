@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: webfrontend
-        image: mplin2.azurecr.io/webfrontend
+        image: ""
         env:
         - name: testargo
           value: |
