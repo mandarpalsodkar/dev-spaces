@@ -1,4 +1,4 @@
-# file: development/common-values.yaml
+# file: development/common-values.yaml.
 kind: 
 common:
   autoscaling:
