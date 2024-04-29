@@ -4,8 +4,8 @@
 
 replicaCount: 1
 
-image:  
-    repository: mplin2.azurecr.io/test
+image: 
+    repository: "mplin2.azurecr.io/webfrontend/webfrontend"
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
     tag: ""
@@ -40,7 +40,7 @@ securityContext: {}
 
 service:
   type: LoadBalancer
-  port: 80
+  port: 90
 
 config: []
 

@@ -5,8 +5,8 @@
 
 replicaCount: 1
 
-image:  
-    repository: mplin2.azurecr.io/webfrontend
+image_1:  
+    repository_1: mplin2.azurecr.io/webfrontend/
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
     tag: ""
@@ -41,7 +41,7 @@ securityContext: {}
 
 service_1:
   type: ClusterIP
-  port_1: 90
+  port_1: 80
 
 config: []
 
