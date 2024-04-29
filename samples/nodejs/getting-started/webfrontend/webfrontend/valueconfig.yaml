@@ -40,7 +40,7 @@ securityContext: {}
   # runAsUser: 1000
 
 service_1:
-  type: LoadBalancer
+  type: ClusterIP
   port_1: 100
 
 config: []
