@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: webfrontend
-        image: ""
+        image: "1"
         env:
         - name: testargo
           value: |
