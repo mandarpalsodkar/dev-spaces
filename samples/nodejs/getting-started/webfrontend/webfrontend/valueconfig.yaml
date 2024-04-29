@@ -1,5 +1,6 @@
 # file: development/common-values.yaml.
-kind: 
+apiVersion: v1
+kind: application
 common:
   autoscaling:
   - name: minReplicas
