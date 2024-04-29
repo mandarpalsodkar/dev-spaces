@@ -6,7 +6,7 @@ metadata:
     {{- include "webfrontend.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ .Values.replicaCount | default .Values_config.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
@@ -34,11 +34,11 @@ spec:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: "{{ if .Values.image.repository }}{{ .Values.image.repository }}{{ else }}{{ .Values.image_1.repository_1 }}{{ end }}:{{ if .Values.image.tag }}{{ .Values.image.tag }}{{ else }}{{ .Values.image_1.tag }}{{ end }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy | default .Values_config.image_1.pullPolicy }}
           ports:
             - name: http
-              containerPort: {{ .Values.service.port }}
+              containerPort: {{ .Values.service.port_1 | default .Values.service_1.port_1 }}
               protocol: TCP
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
