@@ -24,3 +24,7 @@ spec:
             {{- if .Values.common.autoscaling }}
             {{- toYaml .Values.common.autoscaling | nindent 12 }}
             {{- end }}
+            {{- toYaml .Values.image | nindent 12 }}
+            {{- if .Values.common.image }}
+            {{- toYaml .Values.common.image | nindent 12 }}
+            {{- end }}

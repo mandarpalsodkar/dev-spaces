@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: configuration
 data:
-  repository: mplin2.azurecr.io/webfrontend
+  repository: test
   #port: "5000"
   type: ClusterIP

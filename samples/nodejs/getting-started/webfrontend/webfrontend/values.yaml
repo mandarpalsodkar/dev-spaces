@@ -85,7 +85,8 @@ readinessProbe:
 autoscaling:
   enabled: false
   minReplicas: 1
-  maxReplicas: 100
+  maxReplicas: 100 
+  #maxReplicas: .Values.common.autoscaling.maxReplicas
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
