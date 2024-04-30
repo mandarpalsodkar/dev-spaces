@@ -15,12 +15,4 @@ spec:
         app: argotest
     spec:
       containers: webfrontend
-        image: ""
-          testimage: 
-            {{- toYaml .Values.image_1 | nindent 12 }}
-            {{- if .Values.common.image_1 }}
-            {{- toYaml .Values.common.image_1 | nindent 12 }}
-            {{- end }}
-              - name: http
-                containerPort: {{ .Values.service_1.port_1 }}
-                protocol: TCP
+        image: "{{ if .Values.image.repository }}{{ .Values.image.repository }}{{ else }}{{ .Values.image_1.repository_1 }}{{ end }}:{{ .Values.image.tag | default .Chart.AppVersion }}" 
