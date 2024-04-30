@@ -15,4 +15,4 @@ spec:
         app: argotest
     spec:
       containers: webfrontend
-        image: "{{ if .Values.image.repository }}{{ .Values.image.repository }}{{ else }}{{ .Values.image_1.repository_1 }}{{ end }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+        image: "{{ if .Values.image.repository }}{{ .Values.image.repository }}{{ else }}{{ .Values.image_1.repository_1 }}{{ end }}:{{ .Values.image.tag | default .Chart.AppVersion }}" 
