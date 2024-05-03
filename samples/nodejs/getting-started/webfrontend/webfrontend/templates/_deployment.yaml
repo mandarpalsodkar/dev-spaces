@@ -1,8 +1,8 @@
-# file: templates/_deployment.yaml
+{{- define "library.deployment" -}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webfrontendtest
+  name: webfrontenddeploy
   labels:
     app: argotest
 spec:
@@ -14,6 +14,7 @@ spec:
       labels:
         app: argotest
     spec:
-      containers: 
+      containers:
         - name: webfrontend
-          image: "{{ if .Values.image.repository }}{{ .Values.image.repository }}{{ else }}{{ .Values.image_1.repository_1 }}{{ end }}:{{ .Values.image.tag | default .Chart.AppVersion }}" 
+          image: "{{ if .Values.image.repository }}{{ .Values.image.repository }}{{ else }}{{ .Values.image_1.repository_1 }}{{ end }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+{{- end }}          
