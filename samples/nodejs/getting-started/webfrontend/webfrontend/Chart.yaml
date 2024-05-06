@@ -25,5 +25,5 @@ appVersion: v1
 
 dependencies:
   - name: library
-    version: 0.1.0
+#    version: 0.1.0
     repository: http://localhost:8082/artifactory/example-repo-local/
