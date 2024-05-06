@@ -5,7 +5,11 @@
 replicaCount: 1
 
 image: 
+<<<<<<< HEAD
     repository: ""
+=======
+    repository: mpkubeacrt.azurecr.io/webfrontend
+>>>>>>> 3a5e7227b23eb7989b4a03ab5227dada41c7bf64
     pullPolicy: Always
     # Overrides the image tag whose default is the chart appVersion.
     tag: ""
