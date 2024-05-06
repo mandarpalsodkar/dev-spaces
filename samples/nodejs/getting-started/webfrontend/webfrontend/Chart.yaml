@@ -24,6 +24,6 @@ version: 0.1.0
 appVersion: v1
 
 dependencies:
-  - name: library
+  - name: webfrontend
     version: 0.1.0
     repository: http://localhost:8082/artifactory/example-repo-local/
