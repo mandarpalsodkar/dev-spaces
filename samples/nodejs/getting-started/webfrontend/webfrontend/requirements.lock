@@ -1,0 +1,6 @@
+dependencies:
+- name: webfrontend
+  repository: http://localhost:8082/artifactory/example-repo-local/
+  version: 0.1.0
+digest: sha256:34b7d6c581fce06b50c0bf732c6f1bd205d18d4cc7bd350c9dfddb4f95555b28
+generated: "2024-05-06T19:05:05.9054097Z"
