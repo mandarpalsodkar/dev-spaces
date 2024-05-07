@@ -1,0 +1,13 @@
+#{{- include "webfrontend.ingress" . }}
+#---
+#{{- include "webfrontend.service" . }}
+---
+{{- include "webfrontend.deployment" . }}
+---
+#{{- include "webfrontend.hpa" . }}
+#---
+#{{- include "webfrontend.serviceaccount" . }}
+#---
+#{{- include "webfrontend.persistentvolumeclaim" . }}
+#---
+#{{- include "webfrontend.servicemonitor" . }}
