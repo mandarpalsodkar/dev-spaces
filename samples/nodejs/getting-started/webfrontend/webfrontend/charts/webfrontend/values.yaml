@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image: 
-    repository: mpkubeacrt.azurecr.io/webfrontend
+    repository: ""
+    pullPolicy: Always
     # Overrides the image tag whose default is the chart appVersion.
     tag: ""
-    pullPolicy: Always
 
 imagePullSecrets: []
 nameOverride: ""

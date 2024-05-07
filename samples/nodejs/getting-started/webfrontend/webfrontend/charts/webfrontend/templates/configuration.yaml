@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configuration
+data:
+  repository: test
+  #port: "5000"
+  type: ClusterIP

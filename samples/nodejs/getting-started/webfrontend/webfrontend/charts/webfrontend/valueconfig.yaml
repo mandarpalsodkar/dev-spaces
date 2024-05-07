@@ -1,14 +1,15 @@
+# file: development/common-values.yaml.
 # Default values for webfrontend.
 # This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
+# Declare variables to be passed into your templates..
 
 replicaCount: 1
 
-image: 
-    repository: mpkubeacrt.azurecr.io/webfrontend
+image_1:  
+    repository_1: mpkubeacrt.azurecr.io/webfrontend
+    pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
     tag: ""
-    pullPolicy: Always
 
 imagePullSecrets: []
 nameOverride: ""
@@ -38,9 +39,9 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
-service:
-  type: LoadBalancer
-  port: 80
+service_1:
+  type: ClusterIP
+  port_1: 80
 
 config: []
 
@@ -82,10 +83,10 @@ readinessProbe:
     path: /
     port: http
 
-autoscaling:
+autoscaling_1:
   enabled: false
-  minReplicas: 1
-  maxReplicas: 100 
+  minReplicas_1: 2
+  maxReplicas_1: 200 
   #maxReplicas: .Values.common.autoscaling.maxReplicas
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
@@ -103,3 +104,13 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+#common:
+ # autoscaling:
+  #- name: minReplicas
+   # value: "2"
+  #- name: maxReplicas
+   # value: "102"
+  #image:  
+  #- name: repository
+   # value: mplin2.azurecr.io/
