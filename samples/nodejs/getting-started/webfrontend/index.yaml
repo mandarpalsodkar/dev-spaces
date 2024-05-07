@@ -3,9 +3,9 @@ entries:
   webfrontend:
   - apiVersion: v1
     appVersion: v1
-    created: "2024-05-06T17:32:44.5804392Z"
+    created: "2024-05-07T06:07:28.2261845Z"
     description: A Helm chart for Kubernetes
-    digest: ee0116bac78e8d8d95f8325849c343c9283d6706fdc9cd1e8529f3ee329e0185
+    digest: 10d86eb34d5d80396cf015d75d0da206c28b6fd5c1acee70651a7abc5112005d
     name: webfrontend
     type: application
     urls:
@@ -13,7 +13,7 @@ entries:
     version: 0.1.0
   - apiVersion: v1
     appVersion: v1
-    created: "2024-05-06T17:32:44.5814402Z"
+    created: "2024-05-07T06:07:28.2351819Z"
     description: A Helm chart for Kubernetes
     digest: 18ad09f10d4022ef9dca241c1c9c6b99ee46bf81139a23626415bc3c046433ee
     name: webfrontend
@@ -21,4 +21,4 @@ entries:
     urls:
     - http://localhost:8082/artifactory/example-repo-local/webfrontend/webfrontend-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-06T17:32:44.5794404Z"
+generated: "2024-05-07T06:07:28.225184Z"
